@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/without_Dima_title"
+            android:layout_width="354dp"
+            android:layout_height="51dp"
+            android:text="@string/Title"
+            android:textAlignment="center"
+            android:textColor="#27402D"
+            android:textIsSelectable="false"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/kommunal_type_drop_down"
+            android:layout_width="265dp"
+            android:layout_height="64dp"
+            android:entries="@array/counters"
+            android:spinnerMode="dropdown" />
+
+        <EditText
+            android:id="@+id/kommunal_values_input"
+            android:layout_width="322dp"
+            android:layout_height="48dp"
+            android:ems="10"
+            android:hint="@string/progress_title"
+            android:inputType="numberDecimal"
+            android:textColorHint="#757575"
+            android:importantForAutofill="no" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/get_cost_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/get_cost_btn"
+                android:onClick="onClickGetCostBtn"
+                style="?android:attr/buttonBarButtonStyle" />
+
+            <Button
+                android:id="@+id/start_paying_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/start_paying_btn"
+                style="?android:attr/buttonBarButtonStyle" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/progress_bar_title"
+            android:layout_width="321dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="60dp"
+            android:text="@string/executing_progress_desc" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="331dp"
+            android:layout_height="41dp" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:id="@+id/result_title"
+            android:layout_width="328dp"
+            android:layout_height="35dp"
+            android:text="@string/result_title" />
+
+        <WebView
+            android:id="@+id/result_desc"
+            android:layout_width="365dp"
+            android:layout_height="331dp"
+            android:text="@string/result_desc" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

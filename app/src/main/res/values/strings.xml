@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Коммунальные</string>
+    <string name="Title">Программа для оплаты коммунальных услуг без участия Димы.</string>
+    <string name="progress_title">Показание счетчика за этот месяц</string>
+    <string name="start_paying_btn">Оплатить</string>
+    <string name="executing_progress_desc">Прогресс готовности исполнения задачи:</string>
+    <string name="result_title">Результат:</string>
+    <string name="result_desc">Ничего не происходит…</string>
+    <string name="get_cost_btn">Узнать стоимость</string>
+    <string name="checkboxinfo">CheckBoxInfo</string>
+    <string name="tvinfo">tvInfo</string>
+    <string-array name="counters">
+        <item>Свет счетчик</item>
+        <item>Газ счетчик</item>
+        <item>Вода и мусор</item>
+        <item>Телефон в доме</item>
+        <item>Интернет в доме</item>
+        <item>Мобильник Вали</item>
+        <item>Мобильник Васи</item>
+    </string-array>
+</resources>
