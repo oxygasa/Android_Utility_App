@@ -19,6 +19,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import java.security.KeyException;
+import java.sql.Time;
+import java.util.concurrent.TimeUnit;
 
 public class MainActivity extends AppCompatActivity {
     public Spinner kommunalTypeDropDown;
@@ -68,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
             getCostBtnFlag = false;
             getCostBtn.setText("Узнать стоимость");
             resultDescWebView.getSettings().setJavaScriptEnabled(true);
-            resultDescWebView.loadUrl("https://google.com");
+            resultDescWebView.loadUrl("https://gta-real.com");
             resultTitle.setText("Открыт сайт...");
 
             new Thread(new Runnable() {
@@ -79,7 +81,10 @@ public class MainActivity extends AppCompatActivity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            System.out.println("hohoho");
+                            resultDescWebView.loadUrl("https://gta-real.com");
+                            resultDescWebView.loadUrl("function getElementByXpath(path) {\n" +
+                                    "  return document.evaluate(path, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;\n" +
+                                    "}; getElementByXpath(\"//a[@href='https://gta-real.com/news']\").click();");
                         }
                     });
                 }
